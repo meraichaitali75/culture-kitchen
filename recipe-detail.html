@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Culture Kitchen | Recipe Detail</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link href="./css/jquery.bxslider.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/recipe-detail.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <main class="">
+      <div class="card recipe-detail-card">
+        <div class="row">
+          <div class="col col-md-4">
+            <div class="recipe-sidebar">
+              <div>
+                <h2 class="animate__animated animate__bounce">Learn how to cook this recipe</h2>
+              </div>
+              <img src="assets/images/butter_chicken.png" class="recipe-img" alt="paneer_butter_masala" />
+            </div>
+          </div>
+          <div class="col col-md-8">
+            <div class="card-body">
+              <div class="card-content">
+                <h3 id="recipeTitle" class="card-title animate__animated animate__bounce">What's On It</h3>
+                <h5 id="type"></h5>
+                <label>How Many People</label>
+                <div class="select">
+                  <select id="people">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                  </select>
+                </div>
+                <h4 class="my-4">Ingredients</h4>
+                <div class="ingredients-list card-text"></div>
+
+                <!-- ingredient steps -->
+
+                <div class="accordion ingredient-accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne">
+                        <h3 class="card-title animate__animated animate__bounce">Steps to cook</h3>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="ingredient-card">
+                          <div class="ingredient-body"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="related-prod-slider">
+                <h3 class="card-title animate__animated animate__bounce">Related Recipes</h3>
+                <ul class="relatedProdSlider">
+                  <li>
+                    <img src="./assets/images/butter_chicken.png" />
+                  </li>
+                  <li>
+                    <img src="assets/images/paneer_butter_masala.png" />
+                  </li>
+                  <li>
+                    <img src="./assets/images/khloe-arledge.png" />
+                  </li>
+                  <li>
+                    <img src="./assets/images/luisa-brimble.png" />
+                  </li>
+                  <li>
+                    <img src="./assets/images/nicholas-grande.png" />
+                  </li>
+                  <li>
+                    <img src="./assets/images/paneer_butter_masala.png" />
+                  </li>
+                  <li>
+                    <img src="./assets/images/vegetable-biryani.png" />
+                  </li>
+                  <li>
+                    <img src="./assets/images/butter_chicken.png" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="footer"></div>
+
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+    <script src="./libs/jquery.bxslider.min.js"></script>
+    <script src="./js/recipe-detail.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

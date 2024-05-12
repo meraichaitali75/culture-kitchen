@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Culture Kitchen</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/create-recipe.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="content">
+      <h1>Create Recipe</h1>
+
+      <div class="recipe-form">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="mb-3">
+              <img
+                height="400px"
+                width="100%"
+                id="recipeImg"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Ww8AAj8BXkQ+xPEAAAAASUVORK5CYII=" />
+              <input class="form-control mt-3" type="file" id="recipeImage" />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="m-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" aria-describedby="titleHelp" />
+              <div id="titleHelp" class="form-text">What we will call this recipe</div>
+            </div>
+            <div class="m-3">
+              <input
+                type="radio"
+                class="btn-check"
+                name="options-outlined"
+                id="success-outlined"
+                value="veg"
+                autocomplete="off"
+                checked />
+              <label class="btn btn-outline-success" for="success-outlined">Veg</label>
+
+              <input
+                type="radio"
+                value="non-veg"
+                class="btn-check"
+                name="options-outlined"
+                id="danger-outlined"
+                autocomplete="off" />
+              <label class="btn btn-outline-danger" for="danger-outlined">Non-Veg</label>
+            </div>
+            <div class="m-3">
+              <h5>Add Ingredients</h5>
+              <div class="m-3 card">
+                <div class="card-body">
+                  <div id="ingredientList"></div>
+                </div>
+              </div>
+
+              <div class="m-3 card">
+                <div class="card-body">
+                  <div class="row gy-2 gx-3 align-items-center">
+                    <div class="col-8">
+                      <select class="form-select" aria-label="Select Ingredient" id="ingredientName">
+                        <option value="default" selected>Ingredient</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <select class="form-select" id="ingredientType">
+                        <option value="default" selected>Type</option>
+                        <option value="whole">Whole</option>
+                        <option value="chopped">Chopped</option>
+                        <option value="sliced">Sliced</option>
+                        <option value="chopped">Chopped</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="m-3">
+                    <div class="row gy-2 gx-3 align-items-center">
+                      <label for="ingredientQuantity" class="form-label">Quantity</label>
+                      <div class="col-6">
+                        <label class="visually-hidden" for="ingredientQuantity">Name</label>
+                        <input type="text" class="form-control" id="ingredientQuantity" placeholder="Enter Quantity" />
+                      </div>
+                      <div class="col-6">
+                        <select class="form-select" id="ingredientUnit">
+                          <option value="default" selected>Unit</option>
+                          <option value="grams">grams</option>
+                          <option value="whole">whole</option>
+                          <option value="cup">Cup</option>
+                          <option value="bunch">Bunch</option>
+                          <option value="small">Small</option>
+                          <option value="medium">Medium</option>
+                          <option value="large">Large</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary mt-3 add-ingredient">Add</button>
+                </div>
+              </div>
+            </div>
+            <div class="m-3">
+              <h5>Steps to Cook</h5>
+
+              <div class="m-3 card">
+                <div class="card-body">
+                  <div id="stepList"></div>
+                </div>
+              </div>
+
+              <div class="m-3 card">
+                <div class="card-body">
+                  <h4>Step <span id="stepCount">1</span></h4>
+                  <h6 class="my-2">Choose Image</h6>
+
+                  <div class="m-2">
+                    <img
+                      height="200px"
+                      width="200px"
+                      width="100%"
+                      id="stepImage"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Ww8AAj8BXkQ+xPEAAAAASUVORK5CYII=" />
+                    <input class="form-control mt-3" type="file" id="stepImageInput" />
+                  </div>
+                  <h6 class="my-2">Description</h6>
+                  <textarea class="form-control" placeholder="Leave a comment here" id="stepDescription"> </textarea>
+                  <button type="button" class="btn btn-primary mt-3 add-step">Add</button>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="saveRecipeBtn">SAVE RECIPE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/create-recipe.js"></script>
+    <!-- <script src="./js/footer.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,40 @@
+:root {
+  --gray: #2c3e50b5;
+  --white: #fff;
+  --darkgray: #2c3e50b5;
+  --orange: #a9060e;
+}
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.login-container .login-frm {
+  background-color: var(--darkgray);
+  padding: 50px;
+  width: 500px;
+  border-radius: 20px 0 20px 0;
+  background-image: url(../assets/images/recipe-detail-bg.svg);
+  background-size: cover;
+}
+.login-frm .form-label {
+  color: #fff;
+  font-weight: 600;
+}
+.login-frm .form-text {
+  color: var(--orange);
+  font-weight: 600;
+  background-color: #eee;
+  border-radius: 5px 0 5px 0;
+  font-size: 12px;
+  padding: 3px;
+}
+#passwordHelp,
+#emailHelp {
+  display: none;
+}
+
+.success-msg {
+  color: green;
+}

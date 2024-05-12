@@ -1,0 +1,38 @@
+.navbar-nav {
+  margin-left: auto;
+}
+.ck-logo {
+  width: 250px;
+  object-fit: contain;
+}
+.navbar {
+  padding: 20px 10px;
+  box-shadow: 1px 1px 20px #8e7d7d;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 2px;
+  color: gray;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background-color: #ed1c24;
+  color: #fff;
+  /* transform: scale(0.9); */
+}
+@media screen and (max-width: 1024px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+   font-size: 14px;
+   text-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ck-logo {
+    width: 150px;
+  }
+}

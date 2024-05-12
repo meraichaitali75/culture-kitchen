@@ -1,0 +1,365 @@
+:root {
+  --background-gradient: linear-gradient(178deg, #ffff33 10%, #3333ff);
+  --gray: #2c3e50b5;
+  --white: #fff;
+  --darkgray: #2c3e50b5;
+  --orange: #a9060e;
+  --hue: 223;
+  --bg: hsl(var(--hue), 90%, 90%);
+  --fg: hsl(var(--hue), 90%, 10%);
+  --star: hsl(47.63deg 90% 50%);
+  --star-dim: hsl(var(--hue), 10%, 70%);
+  --star-down: hsl(var(--hue), 90%, 20%);
+  --bezier: cubic-bezier(0.42, 0, 0.58, 1);
+  --trans-dur: 0.3s;
+}
+select {
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--orange);
+  background-image: url(../assets/images/recipe-detail-bg.svg);
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: var(--orange);
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+.select::after {
+  color: var(--white);
+}
+.row {
+  margin: 0;
+}
+.col {
+  margin: 0;
+  padding: 0;
+}
+.recipe-detail-card h5 {
+  margin-bottom: 20px;
+}
+.recipe-detail-card .rating-title {
+  margin-bottom: 10px;
+  color: #a4060e;
+  font-weight: 600;
+}
+.recipe-detail-card h5 {
+  margin-bottom: 20px;
+}
+.recipe-detail-card .card-text {
+  margin-top: 20px;
+}
+.recipe-detail-card .card-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 0;
+}
+.recipe-sidebar {
+  height: 100%;
+  padding: 30px 10px 0 25px;
+  margin: 0 auto;
+  background-image: url(../assets/images/recipe-detail-bg.svg);
+  background-repeat: repeat;
+  overflow-x: hidden;
+  background-color: #aa0710;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.recipe-sidebar h2 {
+  text-transform: capitalize;
+  color: #fff;
+}
+h3 {
+  font-weight: 700;
+  font-size: 25px;
+}
+.recipe-sidebar span {
+  text-transform: capitalize;
+  color: #fff;
+}
+.recipe-sidebar .recipe-img {
+  padding: 100px 0;
+  height: 600px;
+  object-fit: contain;
+}
+.ingredient-accordion {
+  margin: 20px 0;
+}
+.ingredient-accordion .accordion-button {
+  padding: 10px;
+  color: #000;
+}
+.ingredient-accordion h3 {
+  margin: 0;
+}
+.ingredient-card {
+  margin-bottom: 30px;
+}
+.ingredient-card .card-row {
+  border-bottom: 1px solid #2c3e50b5;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.ingredient-card h6 {
+  font-weight: bold;
+}
+.ingredient-card p {
+  font-size: 14px;
+}
+.ingredient-card .ingredient-img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  border-radius: 10px 0 10px 0;
+}
+.related-prod-slider li {
+  background-image: url(../assets/images/recipe-detail-bg.svg);
+}
+.related-prod-slider .bx-wrapper {
+  width: 100%;
+  max-width: 100% !important;
+}
+.relatedProdSlider img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
+/* rating css */
+
+.rating {
+  margin: auto;
+}
+.rating__stars {
+  display: flex;
+  position: relative;
+}
+.rating__star {
+  display: block;
+  overflow: visible;
+  pointer-events: none;
+  width: 2em;
+  height: 2em;
+}
+.rating__star-body,
+.rating__star-body-g,
+.rating__star-shadow {
+  animation-duration: 1.2s;
+  animation-timing-function: var(--bezier);
+  animation-fill-mode: forwards;
+}
+.rating__star-body {
+  fill: var(--star-dim);
+  transform-origin: 16px 17.45px;
+  transition: fill var(--trans-dur) var(--bezier);
+}
+.rating__star-body-g {
+  animation-name: starShrink;
+  transform: scale(0.67);
+  transform-origin: 16px 31px;
+}
+.rating__star-shadow {
+  animation-name: starShadowShrink;
+  fill: rgba(48, 3, 3, 0.3);
+  transform: scale(0.67);
+  transform-origin: 16px 31px;
+}
+.rating--pristine .rating__star-body,
+.rating--pristine .rating__star-body-g,
+.rating--pristine .rating__star-shadow {
+  animation-duration: 0s;
+}
+.rating__label,
+.rating__input {
+  -webkit-tap-highlight-color: transparent;
+}
+.rating__label {
+  cursor: pointer;
+  padding: 0.1875em;
+}
+.rating__label--delay1 .rating__star-body,
+.rating__label--delay1 .rating__star-body-g {
+  animation-delay: 0.05s;
+}
+.rating__label--delay2 .rating__star-body,
+.rating__label--delay2 .rating__star-body-g {
+  animation-delay: 0.1s;
+}
+.rating__label--delay3 .rating__star-body,
+.rating__label--delay3 .rating__star-body-g {
+  animation-delay: 0.15s;
+}
+.rating__label--delay4 .rating__star-body,
+.rating__label--delay4 .rating__star-body-g {
+  animation-delay: 0.2s;
+}
+.rating__input {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.rating__input-1:hover ~ .rating__label:first-of-type .rating__star-body,
+.rating__input-2:hover ~ .rating__label:nth-of-type(-n + 2) .rating__star-body,
+.rating__input-3:hover ~ .rating__label:nth-of-type(-n + 3) .rating__star-body,
+.rating__input-4:hover ~ .rating__label:nth-of-type(-n + 4) .rating__star-body,
+.rating__input-5:hover ~ .rating__label:nth-of-type(-n + 5) .rating__star-body {
+  fill: var(--star);
+}
+.rating__input-1:checked ~ .rating__label:first-of-type .rating__star-body,
+.rating__input-2:checked ~ .rating__label:nth-of-type(-n + 2) .rating__star-body,
+.rating__input-3:checked ~ .rating__label:nth-of-type(-n + 3) .rating__star-body,
+.rating__input-4:checked ~ .rating__label:nth-of-type(-n + 4) .rating__star-body,
+.rating__input-5:checked ~ .rating__label:nth-of-type(-n + 5) .rating__star-body {
+  animation-name: starSpin;
+  fill: var(--star);
+}
+.rating__input-1:checked ~ .rating__label:first-of-type .rating__star-body-g,
+.rating__input-2:checked ~ .rating__label:nth-of-type(-n + 2) .rating__star-body-g,
+.rating__input-3:checked ~ .rating__label:nth-of-type(-n + 3) .rating__star-body-g,
+.rating__input-4:checked ~ .rating__label:nth-of-type(-n + 4) .rating__star-body-g,
+.rating__input-5:checked ~ .rating__label:nth-of-type(-n + 5) .rating__star-body-g {
+  animation-name: starJump;
+}
+.rating__input-1:checked ~ .rating__label:first-of-type .rating__star-shadow,
+.rating__input-2:checked ~ .rating__label:nth-of-type(-n + 2) .rating__star-shadow,
+.rating__input-3:checked ~ .rating__label:nth-of-type(-n + 3) .rating__star-shadow,
+.rating__input-4:checked ~ .rating__label:nth-of-type(-n + 4) .rating__star-shadow,
+.rating__input-5:checked ~ .rating__label:nth-of-type(-n + 5) .rating__star-shadow {
+  animation-name: starShadow;
+}
+.rating__input-2:checked ~ .rating__label:nth-of-type(-n + 1):hover .rating__star-body,
+.rating__input-3:checked ~ .rating__label:nth-of-type(-n + 2):hover .rating__star-body,
+.rating__input-4:checked ~ .rating__label:nth-of-type(-n + 3):hover .rating__star-body,
+.rating__input-5:checked ~ .rating__label:nth-of-type(-n + 4):hover .rating__star-body {
+  fill: var(--star-down);
+}
+.rating__sr {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+@keyframes starJump {
+  from {
+    transform: translateY(0) scale(0.67, 0.67);
+  }
+  20% {
+    transform: translateY(0) scale(0.75, 0.5);
+  }
+  40% {
+    transform: translateY(-100%) scale(1.15, 1.15);
+  }
+  60% {
+    transform: translateY(0) scale(1.1, 0.6);
+  }
+  80% {
+    transform: translateY(0) scale(0.95, 1.1);
+  }
+  to {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+@keyframes starShadow {
+  from {
+    transform: scale(0.67, 1);
+  }
+  20% {
+    transform: scale(0.75, 1);
+  }
+  40% {
+    transform: scale(1.15, 1);
+  }
+  60% {
+    transform: scale(1.1, 1);
+  }
+  80% {
+    transform: scale(0.95, 1);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@keyframes starShrink {
+  from {
+    animation-timing-function: ease-in;
+    transform: scale(1, 1);
+  }
+  20% {
+    animation-timing-function: ease-out;
+    transform: scale(0.6, 0.6);
+  }
+  40%,
+  to {
+    transform: scale(0.67, 0.67);
+  }
+}
+@keyframes starShadowShrink {
+  from {
+    animation-timing-function: ease-in;
+    transform: scale(1, 1);
+  }
+  20% {
+    animation-timing-function: ease-out;
+    transform: scale(0.6, 1);
+  }
+  40%,
+  to {
+    transform: scale(0.67, 1);
+  }
+}
+@keyframes starSpin {
+  from,
+  20% {
+    transform: rotate(0);
+  }
+  60%,
+  to {
+    transform: rotate(144deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .relatedProdSlider img {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .select {
+    width: 100%;
+  }
+  .recipe-sidebar .recipe-img {
+    padding: 0;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  .related-prod-slider {
+    margin-top: 30px;
+  }
+}

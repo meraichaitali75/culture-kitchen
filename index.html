@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culture Kitchen | Home</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="css/recipe-list.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+    <!-- banner -->
+    <section class="banner-section">
+      <div class="overlay">
+        <img src="./assets/images/Food-grouping.png" alt="Home Banner" />
+      </div>
+    </section>
+    <!-- main -->
+    <main class="main-content">
+      <div class="container-fluid">
+        <div class="row recipe-header">
+          <div class="col-md-8">
+            <button type="button" id="show-all" class="btn btn-primary">Show All</button>
+            <button type="button" id="show-veg" class="btn btn-success">Veg</button>
+            <button type="button" id="show-non-veg" class="btn btn-danger">Non-Veg</button>
+          </div>
+          <div class="col-md-4">
+            <input class="form-control" id="searchbar" type="text" name="search" placeholder="Search food here.." />
+          </div>
+        </div>
+        <div class="row recipeCards"></div>
+      </div>
+    </main>
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+    <script src="js/recipe-list.js"></script>
+    <script src="js/header.js"></script>
+  </body>
+</html>

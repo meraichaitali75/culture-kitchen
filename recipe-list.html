@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culture Kitchen | Home</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/recipe-list.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header"></div>
+    <!-- banner -->
+    <section class="banner-section">
+        <div class="overlay">
+            <img src="./assets/images/Food-grouping.png" alt="Home Banner" />
+        </div>
+    </section>
+    <!-- main -->
+    <main class="main-content">
+        <div class="container-fluid">
+            <div class="row recipe-header">
+                <div class="col-md-8">
+                    <button type="button" onclick="showAllRecipes()" class="btn btn-primary mx-2">
+                        Show All
+                    </button>
+                    <button type="button" onclick="showVegRecipes()" class="btn btn-success mx-2">
+                        Veg
+                    </button>
+                    <button type="button" onclick="showNonVegRecipes()" class="btn btn-danger mx-2">
+                        Non-Veg
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" id="searchbar" onkeyup="searchRecipe()" type="text" name="search"
+                        placeholder="Search food here.." />
+                </div>
+            </div>
+            <div class="row recipeCards">
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/paneer_butter_masala.png" alt="Paneer Butter Masala" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Paneer Butter Masala</h5>
+                            <p class="card-text">Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card non-veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/butter_chicken.png" alt="Butter Chicken" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Butter Chicken</h5>
+                            <p class="card-text">Non-Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card non-veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/fish.png" alt="Vegetable Noodles" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Veg Noodles</h5>
+                            <p class="card-text">Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/vegetable-biryani.png" alt="Vegetable Biriyani" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Veg Biryani</h5>
+                            <p class="card-text">Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card non-veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/khloe-arledge.png" alt="Paneer Butter Masala" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Paneer Butter Masala</h5>
+                            <p class="card-text">Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/luisa-brimble.png" alt="Butter Chicken" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Butter Chicken</h5>
+                            <p class="card-text">Non-Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card non-veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/fish.png" alt="Vegetable Noodles" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Veg Noodles</h5>
+                            <p class="card-text">Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card recipe-custom-card non-veg">
+                        <a href="recipe-detail.html"><img class="card-img-top recipe-card-img"
+                                src="assets/images/nicholas-grande.png" alt="Vegetable Biriyani" /></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Veg Biryani</h5>
+                            <p class="card-text">Vegetarian</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+    <script src="js/recipe-list.js"></script>
+    <script src="js/header.js"></script>
+</body>
+
+</html>
